@@ -10,4 +10,7 @@ class TestCalculator(unittest.TestCase):
         calculator = Calculator()
 
         # Act
+        result = calculator.add(1, 2)
+
         # Assert
+        self.assertEqual(3, result)
