@@ -21,3 +21,13 @@ class TestCalculator(unittest.TestCase):
 
         # Act/Assert
         self.assertRaises(CalculatorError, calculator.add, 1, 'gotcha!')
+
+    def test_adds_many_numbers(self):
+        # Arrange
+        calculator = Calculator()
+
+        # Act
+        result = calculator.add(1, 2, 3)
+
+        # Assert
+        self.assertEqual(6, result)
