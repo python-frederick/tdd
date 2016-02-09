@@ -1,3 +1,4 @@
+import functools
 import operator
 
 
@@ -9,6 +10,6 @@ class Calculator(object):
 
     def add(self, *args):
         try:
-            return reduce(operator.add, args)
-        except TypeError:
-            raise CalculatorError('Sorry! Your input is invalid.')
+            return functools.reduce(operator.add, args, 0)
+        except TypeError as ex:
+            raise CalculatorError('Sorry! Your input is invalid.') from ex

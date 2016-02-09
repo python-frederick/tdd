@@ -31,3 +31,13 @@ class TestCalculator(unittest.TestCase):
 
         # Assert
         self.assertEqual(6, result)
+
+    def test_adds_no_numbers(self):
+        # Arrange
+        calculator = Calculator()
+
+        # Act
+        result = calculator.add()
+
+        # Assert
+        self.assertEqual(0, result)
